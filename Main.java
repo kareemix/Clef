@@ -13,6 +13,8 @@ public class Main {
 
         File input_file = new File(args[0]);
 
+        // System.getProperty("user.dir")
+
     }
 
 }

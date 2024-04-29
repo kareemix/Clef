@@ -6,4 +6,12 @@ public class Parser {
             "set"
     };
 
+    public void parse(File input_file) {
+
+        Scanner parseScanner = new Scanner(input_file);
+
+        int lineNumber = 1;
+
+    }
+
 }
