@@ -1,0 +1,163 @@
+{
+    "metadata": 
+    {
+        "schema_version": "0.2", 
+        "title": "Test", 
+        "creators": 
+        [
+            "Andrew Nadar"
+        ], 
+        "source_filename": "Test.mscz", 
+        "source_format": "musescore"
+    }, 
+    "resolution": 480, 
+    "tempos": 
+    [
+        {
+            "time": 0,
+            "qpm": 120.0
+        }
+    ], 
+    "time_signatures": 
+    [
+        {
+            "time": 0, 
+            "numerator": 7, 
+            "denominator": 8
+        }
+    ],
+    "barlines": 
+    [
+        {
+            "time": 0
+        }, 
+        {
+            "time": 1680
+        }, 
+        {
+            "time": 3360
+        }, 
+        {
+            "time": 5040
+        }, 
+        {
+            "time": 6720
+        }
+    ], 
+    "beats": 
+    [
+        {
+            "time": 0
+        }, 
+        {
+            "time": 240
+        }, 
+        {
+            "time": 480
+        }, 
+        {
+            "time": 720
+        }, 
+        {
+            "time": 960
+        }, 
+        {
+            "time": 1200
+        }, 
+        {
+            "time": 1440
+        }, 
+        {
+            "time": 1680
+        }, 
+        {
+            "time": 1920
+        }, 
+        {
+            "time": 2160
+        }, 
+        {
+            "time": 2400
+        }, 
+        {
+            "time": 2640
+        }, 
+        {
+            "time": 2880
+        }, 
+        {
+            "time": 3120
+        }, 
+        {
+            "time": 3360
+        }, 
+        {
+            "time": 3600
+        }, 
+        {
+            "time": 3840
+        }, 
+        {
+            "time": 4080
+        }, 
+        {
+            "time": 4320
+        }, 
+        {
+            "time": 4560
+        }, 
+        {
+            "time": 4800
+        }, 
+        {
+            "time": 5040
+        }, 
+        {
+            "time": 5280
+        }, 
+        {
+            "time": 5520
+        }, 
+        {
+            "time": 5760
+        }, 
+        {
+            "time": 6000
+        }, 
+        {
+            "time": 6240
+        }, 
+        {
+            "time": 6480
+        }, 
+        {
+            "time": 6720
+        }, 
+        {
+            "time": 6960
+        },
+        {
+            "time": 7200
+        },
+        {
+            "time": 7440
+        }, 
+        {
+            "time": 7680
+        }, 
+        {
+            "time": 7920
+        },
+        {
+            "time": 8160
+        }
+    ], 
+    "tracks": 
+    [
+        {
+            "program": 0,
+            "is_drum": false,
+            "name": "Piano"
+        }
+    ]
+}
