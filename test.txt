@@ -1,0 +1,5 @@
+title "Test"
+composer "Andrew Nadar"
+tempo 120
+time_sig 4:4
+measures 32
