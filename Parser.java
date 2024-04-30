@@ -63,6 +63,15 @@ public class Parser {
 
                         break;
 
+                    case "instrument":
+
+                        String[] instrumentSplit = lineSplit[1].split(" ", 2);
+                        Boolean isDrumBool = Boolean.parseBoolean(instrumentSplit[1]);
+                        inputFileObject.instruments.add(instrumentSplit[0]);
+                        inputFileObject.isDrum.add(isDrumBool);
+
+                        break;
+
                     default:
 
                         System.out.println("Invalid Symbol - Line " + lineNumber + " - Symbol " + lineSplit[0]);
@@ -79,7 +88,7 @@ public class Parser {
 
         } catch (FileNotFoundException e) {
 
-            System.out.println("File Not Found - Parser");
+            System.out.println("File Not Found");
             System.exit(1);
 
         }

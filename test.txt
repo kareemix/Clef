@@ -1,5 +1,7 @@
 title "Test"
 composer "Andrew Nadar"
-tempo 120
+tempo 150
 meter 4:4
-measures 32
+measures 4
+instrument "Piano" false
+instrument "Drums" true
