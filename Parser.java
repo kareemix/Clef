@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Parser {
 
@@ -8,65 +10,77 @@ public class Parser {
 
     public void parse(File inputFile) {
 
-        Scanner parseScanner = new Scanner(inputFile);
+        try {
 
-        Music inputFileObject = new Music();
+            Scanner parseScanner = new Scanner(inputFile);
 
-        for (int lineNumber = 1; parseScanner.hasNextLine(); lineNumber++) {
+            Music inputFileObject = new Music();
 
-            String[] lineSplit = parseScanner.nextLine().split(" ", 2);
+            for (int lineNumber = 1; parseScanner.hasNextLine(); lineNumber++) {
 
-            switch (lineSplit[0]) {
+                String[] lineSplit = parseScanner.nextLine().split(" ", 2);
 
-                case "title":
+                switch (lineSplit[0]) {
 
-                    inputFileObject.title = lineSplit[1];
-                    break;
+                    case "title":
 
-                case "composer":
+                        inputFileObject.title = lineSplit[1];
+                        break;
 
-                    inputFileObject.composer = lineSplit[1];
-                    break;
+                    case "composer":
 
-                case "tempo":
+                        inputFileObject.composer = lineSplit[1];
+                        break;
 
-                    String tempoPreParsed = lineSplit[1];
-                    int tempo = Integer.parseInt(tempoPreParsed);
+                    case "tempo":
 
-                    inputFileObject.tempo = tempo;
+                        String tempoPreParsed = lineSplit[1];
+                        int tempo = Integer.parseInt(tempoPreParsed);
 
-                    break;
+                        inputFileObject.tempo = tempo;
 
-                case "meter":
+                        break;
 
-                    String[] meterPreParsed = lineSplit[1].split(":", 2);
-                    int meterTemp = Integer.parseInt(meterPreParsed[0]);
+                    case "meter":
 
-                    inputFileObject.meterNumer = meterTemp;
+                        String[] meterPreParsed = lineSplit[1].split(":", 2);
+                        int meterTemp = Integer.parseInt(meterPreParsed[0]);
 
-                    meterTemp = Integer.parseInt(meterPreParsed[1]);
+                        inputFileObject.meterNumer = meterTemp;
 
-                    inputFileObject.meterDenom = meterTemp;
+                        meterTemp = Integer.parseInt(meterPreParsed[1]);
 
-                    break;
+                        inputFileObject.meterDenom = meterTemp;
 
-                case "measures":
+                        break;
 
-                    String measuresPreParsed = lineSplit[1];
-                    int measuresTemp = Integer.parseInt(measuresPreParsed);
+                    case "measures":
 
-                    inputFileObject.measures = measuresTemp;
+                        String measuresPreParsed = lineSplit[1];
+                        int measuresTemp = Integer.parseInt(measuresPreParsed);
 
-                    break;
+                        inputFileObject.measures = measuresTemp;
 
-                default:
+                        break;
 
-                    System.out.println("Invalid Symbol - Line " + lineNumber + " - Symbol " + lineSplit[0]);
-                    System.exit(1);
+                    default:
 
-                    break;
+                        System.out.println("Invalid Symbol - Line " + lineNumber + " - Symbol " + lineSplit[0]);
+                        System.exit(1);
+
+                        break;
+
+                }
 
             }
+
+            parseScanner.close();
+            inputFileObject.test();
+
+        } catch (FileNotFoundException e) {
+
+            System.out.println("File Not Found - Parser");
+            System.exit(1);
 
         }
 
