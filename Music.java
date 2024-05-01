@@ -75,15 +75,17 @@ public class Music {
             jsonWriter.write("\t\t\"creators\": \n\t\t[\n\t\t\t" + composer + "\n\t\t],\n");
 
             // Source filename / Source format
+            jsonWriter.write("\t\t\"source_filename\": " + title + ",\n");
+            jsonWriter.write("\t\t\"source_format\": \"musescore\"\n");
 
             jsonWriter.write("\t},\n");
 
-            jsonWriter.write("\t\"resolution\": 480,");
+            jsonWriter.write("\t\"resolution\": 480,\n");
             jsonWriter.write("\t\"tempos\":\n\t[\n\t\t{\n\t\t\t\"time\": 0,\n\t\t\t\"qpm\": " + tempo + "\n");
             jsonWriter.write("\t\t}\n\t],\n");
 
             jsonWriter.write("\t\"time_signatures\":\n\t[\n\t\t{\n\t\t\t\"time\": 0,\n\t\t\t\"numerator\": "
-                    + meterNumer + "\n\t\t\t\"denominator\": " + meterDenom + "\n");
+                    + meterNumer + ",\n\t\t\t\"denominator\": " + meterDenom + "\n");
             jsonWriter.write("\t\t}\n\t],\n");
 
             jsonWriter.write("\t\"barlines\":\n");
