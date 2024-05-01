@@ -15,6 +15,13 @@ public class Music {
     int meterNumer;
     int meterDenom;
 
+    enum OutputFileExtension {
+
+        json,
+        xml
+
+    };
+
     public void test() {
 
         System.out.println(title);
@@ -27,23 +34,21 @@ public class Music {
         System.out.println(instruments.size());
         System.out.println(isDrum.size());
 
-        createJson();
-
     }
 
-    public void createJson() {
+    public void createJson(OutputFileExtension extension) {
 
         try {
 
             int rand = (int) (Math.random() * 1000) + 1;
 
-            File outputFile = new File(rand + ".json");
+            File outputFile = new File(rand + "." + extension);
 
             while (!outputFile.createNewFile()) {
 
                 rand = (int) (Math.random() * 1000) + 1;
 
-                outputFile = new File(rand + ".json");
+                outputFile = new File(rand + "." + extension);
 
             }
 
