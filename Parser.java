@@ -4,10 +4,6 @@ import java.io.FileNotFoundException;
 
 public class Parser {
 
-    String[] functions = {
-            "set"
-    };
-
     public void parse(File inputFile) {
 
         try {
@@ -65,10 +61,7 @@ public class Parser {
 
                     case "instrument":
 
-                        String[] instrumentSplit = lineSplit[1].split(" ", 2);
-                        Boolean isDrumBool = Boolean.parseBoolean(instrumentSplit[1]);
-                        inputFileObject.instruments.add(instrumentSplit[0]);
-                        inputFileObject.isDrum.add(isDrumBool);
+                        inputFileObject.instruments.add(lineSplit[1]);
 
                         break;
 

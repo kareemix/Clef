@@ -3,5 +3,5 @@ composer "Andrew Nadar"
 tempo 150
 meter 4:4
 measures 4
-instrument "Piano" false
-instrument "Drums" true
+instrument "Piano"
+instrument "Alto Saxophone"
