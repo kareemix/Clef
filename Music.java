@@ -9,7 +9,7 @@ public class Music {
     String title;
     String composer;
     int tempo;
-    int measures;
+    // int measures;
     LinkedList<Instrument> instruments = new LinkedList<Instrument>();
     int meterNumer;
     int meterDenom;
@@ -19,7 +19,7 @@ public class Music {
         System.out.println(title);
         System.out.println(composer);
         System.out.println(tempo);
-        System.out.println(measures);
+        // System.out.println(measures);
         System.out.println(meterNumer);
         System.out.println(meterDenom);
 
@@ -65,13 +65,32 @@ public class Music {
             xmlWriter.write(
                     "<!DOCTYPE score-partwise PUBLIC \"-//Recordare//DTD MusicXML 3.1 Partwise//EN\" \"http://www.musicxml.org/dtds/partwise.dtd\">\n");
             xmlWriter.write("<score-partwise>\n");
-            xmlWriter.write("\t<work><work-title>" + title.substring(1, title.length() - 2) + "</work-title></work>\n");
+            xmlWriter.write("\t<work><work-title>" + title + "</work-title></work>\n");
             xmlWriter.write("\t<identification><creator type=\"composer\">"
-                    + composer.substring(1, composer.length() - 2) + "</creator></identification>\n");
+                    + composer + "</creator></identification>\n");
 
-            // Rat boilerplate (or crash)
             xmlWriter.write(
-                    "\t<defaults><scaling><millimeters>6.99912</millimeters><tenths>40</tenths></scaling><page-layout><page-height>1596.77</page-height><page-width>1233.87</page-width><page-margins type=\"even\"><left-margin>85.7251</left-margin><right-margin>85.7251</right-margin><top-margin>85.7251</top-margin><bottom-margin>85.7251</bottom-margin></page-margins><page-margins type=\"odd\"><left-margin>85.7251</left-margin><right-margin>85.7251</right-margin><top-margin>85.7251</top-margin><bottom-margin>85.7251</bottom-margin></page-margins></page-layout></defaults>");
+                    "\t<defaults><scaling><millimeters>6.99912</millimeters><tenths>40</tenths></scaling><page-layout><page-height>1596.77</page-height><page-width>1233.87</page-width><page-margins type=\"even\"><left-margin>85.7251</left-margin><right-margin>85.7251</right-margin><top-margin>85.7251</top-margin><bottom-margin>85.7251</bottom-margin></page-margins><page-margins type=\"odd\"><left-margin>85.7251</left-margin><right-margin>85.7251</right-margin><top-margin>85.7251</top-margin><bottom-margin>85.7251</bottom-margin></page-margins></page-layout></defaults>\n");
+
+            xmlWriter.write("\t<part-list>\n");
+
+            for (int i = 0; i < instruments.size(); i++) {
+
+                xmlWriter.write("\t<score-part id=\"P" + (i + 1) + "\">\n");
+                xmlWriter.write("\t\t<part-name>" + instruments.get(i).instrumentName + "</part-name>\n");
+                xmlWriter
+                        .write("\t\t<part-abbreviation>" + instruments.get(i).instrumentAbr
+                                + "</part-abbreviation>\n");
+
+                xmlWriter.write(
+                        "\t\t<score-instrument id=\"P" + (i + 1) + "-I1\">\n\t\t\t<instrument-name>"
+                                + instruments.get(i).instrumentName + "</instrument-name>\n\t\t</score-instrument>\n");
+
+                xmlWriter.write("\t</score-part>\n");
+
+            }
+
+            xmlWriter.write("\t</part-list>\n");
 
             xmlWriter.close();
 

@@ -2,6 +2,5 @@ title "Test"
 composer "Andrew Nadar"
 tempo 150
 meter 4:4
-measures 4
-instrument "Piano"
+instrument "Tuba"
 instrument "Alto Saxophone"

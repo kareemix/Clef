@@ -20,12 +20,12 @@ public class Parser {
 
                     case "title":
 
-                        inputFileObject.title = lineSplit[1];
+                        inputFileObject.title = lineSplit[1].substring(1, lineSplit[1].length() - 1);
                         break;
 
                     case "composer":
 
-                        inputFileObject.composer = lineSplit[1];
+                        inputFileObject.composer = lineSplit[1].substring(1, lineSplit[1].length() - 1);
                         break;
 
                     case "tempo":
@@ -50,18 +50,20 @@ public class Parser {
 
                         break;
 
-                    case "measures":
-
-                        String measuresPreParsed = lineSplit[1];
-                        int measuresTemp = Integer.parseInt(measuresPreParsed);
-
-                        inputFileObject.measures = measuresTemp;
-
-                        break;
+                    // case "measures":
+                    //
+                    // String measuresPreParsed = lineSplit[1];
+                    // int measuresTemp = Integer.parseInt(measuresPreParsed);
+                    //
+                    // inputFileObject.measures = measuresTemp;
+                    //
+                    // break;
 
                     case "instrument":
 
-                        inputFileObject.instruments.add(lineSplit[1]);
+                        Instrument tempInstrument = new Instrument(
+                                lineSplit[1].substring(1, lineSplit[1].length() - 1));
+                        inputFileObject.instruments.add(tempInstrument);
 
                         break;
 
