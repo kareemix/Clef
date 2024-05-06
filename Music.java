@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.lang.Math;
@@ -92,6 +93,72 @@ public class Music {
 
             xmlWriter.write("\t</part-list>\n");
 
+            for (int i = 0; i < instruments.size(); i++) {
+
+                xmlWriter.write("\t<part id=P" + (i + 1) + ">\n");
+                xmlWriter.write("\t\t<measure number=\"1\">\n");
+                xmlWriter.write("\t\t\t<attributes>\n");
+                xmlWriter.write("\t\t\t\t<divisions>1</divisions>\n");
+                xmlWriter.write("\t\t\t\t<key><fifths>0</fifths></key>\n");
+                xmlWriter.write("\t\t\t\t<time><beats>" + meterNumer + "</beats><beat-type>" + meterDenom
+                        + "</beat-type></time>\n");
+
+                Instrument.InstrumentStaff tempInstrumentStaff = instruments.get(i).instrumentStaff;
+
+                if (tempInstrumentStaff == Instrument.InstrumentStaff.TREBLE) {
+
+                    xmlWriter.write("\t\t\t\t<clef>\n");
+                    xmlWriter.write("\t\t\t\t\t<sign>G</sign>\n");
+                    xmlWriter.write("\t\t\t\t\t<line>2</line>\n");
+                    xmlWriter.write("\t\t\t\t</clef>\n");
+
+                } else if (tempInstrumentStaff == Instrument.InstrumentStaff.BASS) {
+
+                    xmlWriter.write("\t\t\t\t<clef>\n");
+                    xmlWriter.write("\t\t\t\t\t<sign>F</sign>\n");
+                    xmlWriter.write("\t\t\t\t\t<line>4</line>\n");
+                    xmlWriter.write("\t\t\t\t</clef>\n");
+
+                } else if (tempInstrumentStaff == Instrument.InstrumentStaff.GRAND) {
+
+                    xmlWriter.write("\t\t\t\t<staves>2</staves>\n");
+                    xmlWriter.write("\t\t\t\t<clef number=\"1\">\n");
+                    xmlWriter.write("\t\t\t\t\t<sign>G</sign>\n");
+                    xmlWriter.write("\t\t\t\t\t<line>2</line>\n");
+                    xmlWriter.write("\t\t\t\t</clef>\n");
+                    xmlWriter.write("\t\t\t\t<clef number=\"2\">\n");
+                    xmlWriter.write("\t\t\t\t\t<sign>F</sign>\n");
+                    xmlWriter.write("\t\t\t\t\t<line>4</line>\n");
+                    xmlWriter.write("\t\t\t\t</clef>\n");
+
+                }
+
+                xmlWriter.write("\t\t\t\t<transpose>");
+                xmlWriter.write("<diatonic>" + instruments.get(i).diatonicTranposition + "</diatonic>");
+                xmlWriter.write("<chromatic>" + instruments.get(i).chromaticTransposition + "</chromatic>");
+                xmlWriter.write("<octave-change>" + instruments.get(i).octaveChange + "</octave-change></transpose>\n");
+
+                xmlWriter.write("</attributes>");
+
+            }
+
+            // </attributes>
+            // <direction placement="above">
+            // <direction-type>
+            // <metronome parentheses="no" default-x="-37.68" relative-y="20.00">
+            // <beat-unit>quarter</beat-unit>
+            // <per-minute>150</per-minute>
+            // </metronome>
+            // </direction-type>
+            // <sound tempo="150"/>
+            // </direction>
+            // <note>
+            // <rest measure="yes"/>
+            // <duration>4</duration>
+            // <voice>1</voice>
+            // </note>
+            // </measure>
+            // </part>
             xmlWriter.close();
 
         } catch (IOException e) {

@@ -4,3 +4,4 @@ tempo 150
 meter 4:4
 instrument "Tuba"
 instrument "Alto Saxophone"
+instrument "Piano"

@@ -87,6 +87,9 @@ public class Instrument {
             case "Glockenspiel":
                 setAll(InstrumentStaff.TREBLE, 0, 0, 2, false, "Glk.");
                 break;
+            case "Piano":
+                setAll(InstrumentStaff.GRAND, 0, 0, 0, false, "Pno.");
+                break;
 
             default:
 
