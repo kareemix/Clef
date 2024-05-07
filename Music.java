@@ -95,7 +95,7 @@ public class Music {
 
             for (int i = 0; i < instruments.size(); i++) {
 
-                xmlWriter.write("\t<part id=P" + (i + 1) + ">\n");
+                xmlWriter.write("\t<part id=\"P" + (i + 1) + "\">\n");
                 xmlWriter.write("\t\t<measure number=\"1\">\n");
                 xmlWriter.write("\t\t\t<attributes>\n");
                 xmlWriter.write("\t\t\t\t<divisions>1</divisions>\n");
@@ -138,27 +138,20 @@ public class Music {
                 xmlWriter.write("<chromatic>" + instruments.get(i).chromaticTransposition + "</chromatic>");
                 xmlWriter.write("<octave-change>" + instruments.get(i).octaveChange + "</octave-change></transpose>\n");
 
-                xmlWriter.write("</attributes>");
+                xmlWriter.write("\t\t\t</attributes>\n");
+
+                if (i == 0) {
+
+                    xmlWriter.write("\t\t\t<direction placement=\"above\"><direction-type>");
+                    xmlWriter.write("<metronome parentheses=\"no\" default-x=\"-37.68\" relative-y=\"20.00\">");
+                    xmlWriter.write("<beat-unit>quarter</beat-unit><per-minute>" + tempo + "</per-minute>");
+                    xmlWriter.write("</metronome></direction-type>");
+                    xmlWriter.write("<sound tempo=\"" + tempo + "\"/></direction>\n");
+
+                }
 
             }
 
-            // </attributes>
-            // <direction placement="above">
-            // <direction-type>
-            // <metronome parentheses="no" default-x="-37.68" relative-y="20.00">
-            // <beat-unit>quarter</beat-unit>
-            // <per-minute>150</per-minute>
-            // </metronome>
-            // </direction-type>
-            // <sound tempo="150"/>
-            // </direction>
-            // <note>
-            // <rest measure="yes"/>
-            // <duration>4</duration>
-            // <voice>1</voice>
-            // </note>
-            // </measure>
-            // </part>
             xmlWriter.close();
 
         } catch (IOException e) {
