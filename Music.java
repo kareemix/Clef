@@ -150,7 +150,23 @@ public class Music {
 
                 }
 
+                xmlWriter.write(
+                        "\t\t\t<note><rest measure=\"yes\"/><duration>4</duration><voice>1</voice></note>\n");
+
+                if (tempInstrumentStaff == Instrument.InstrumentStaff.GRAND) {
+
+                    xmlWriter.write(
+                            "\t\t\t<note><rest measure=\"yes\"/><duration>4</duration><voice>5</voice><staff>2</staff></note>\n");
+
+                }
+
+                xmlWriter.write("\t\t</measure>\n");
+
+                xmlWriter.write("\t</part>\n");
+
             }
+
+            xmlWriter.write("</score-partwise>");
 
             xmlWriter.close();
 
