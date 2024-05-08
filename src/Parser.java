@@ -67,6 +67,10 @@ public class Parser {
 
                         break;
 
+                    case "":
+
+                        break;
+
                     default:
 
                         System.out.println("Invalid Symbol - Line " + lineNumber + " - Symbol " + lineSplit[0]);

@@ -34,7 +34,7 @@ public class Instrument {
         switch (instrumentName) {
 
             case "Piccolo":
-                setAll(InstrumentStaff.TREBLE, 0, 0, 0, false, "Picc.");
+                setAll(InstrumentStaff.TREBLE, 0, 0, 1, false, "Picc.");
                 break;
             case "Flute":
                 setAll(InstrumentStaff.TREBLE, 0, 0, 0, false, "Fl.");

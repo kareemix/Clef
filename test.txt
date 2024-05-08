@@ -1,0 +1,25 @@
+title "all instruments"
+
+instrument "Piccolo"
+instrument "Flute"
+instrument "Oboe"
+instrument "Bassoon"
+
+instrument "Eb Clarinet"
+instrument "Bb Clarinet"
+instrument "Bass Clarinet"
+
+instrument "Alto Saxophone"
+instrument "Tenor Saxophone"
+instrument "Baritone Saxophone"
+
+instrument "Bb Trumpet"
+instrument "F Horn"
+instrument "Trombone"
+instrument "Euphonium"
+instrument "Tuba"
+
+instrument "Double Bass"
+
+instrument "Timpani"
+instrument "Glockenspiel"
