@@ -1,0 +1,8 @@
+title "Op. 1"
+composer "Kareemix"
+tempo 120
+meter 4:4
+
+instrument "Alto Saxophone"
+instrument "Piano"
+instrument "Double Bass"

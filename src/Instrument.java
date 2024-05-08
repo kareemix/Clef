@@ -54,7 +54,7 @@ public class Instrument {
                 setAll(InstrumentStaff.TREBLE, -1, -2, 0, false, "B♭ Cl.");
                 break;
             case "Bass Clarinet":
-                setAll(InstrumentStaff.TREBLE, 0, 0, -1, false, "B. Cl.");
+                setAll(InstrumentStaff.TREBLE, -1, -2, -1, false, "B. Cl.");
                 break;
             case "Alto Saxophone":
                 setAll(InstrumentStaff.TREBLE, -5, -9, 0, false, "A. Sax.");

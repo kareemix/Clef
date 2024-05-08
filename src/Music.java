@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Music {
 
-    String title = "";
+    String title = "template";
     String composer = "";
     int tempo = 120;
     // int measures;
@@ -34,14 +34,11 @@ public class Music {
 
         try {
 
-            int rand = (int) (Math.random() * 1000) + 1;
-
-            File outputFile = new File(rand + ".xml");
+            File outputFile = new File(title + ".xml");
 
             while (!outputFile.createNewFile()) {
 
-                rand = (int) (Math.random() * 1000) + 1;
-
+                int rand = (int) (Math.random() * 10000) + 1;
                 outputFile = new File(rand + ".xml");
 
             }
@@ -153,12 +150,13 @@ public class Music {
                 xmlWriter.write(
                         "\t\t\t<note><rest measure=\"yes\"/><duration>4</duration><voice>1</voice></note>\n");
 
-                if (tempInstrumentStaff == Instrument.InstrumentStaff.GRAND) {
-
-                    xmlWriter.write(
-                            "\t\t\t<note><rest measure=\"yes\"/><duration>4</duration><voice>5</voice><staff>2</staff></note>\n");
-
-                }
+                // if (tempInstrumentStaff == Instrument.InstrumentStaff.GRAND) {
+                //
+                // xmlWriter.write(
+                // "\t\t\t<note><rest
+                // measure=\"yes\"/><duration>4</duration><voice>5</voice><staff>2</staff></note>\n");
+                //
+                // }
 
                 xmlWriter.write("\t\t</measure>\n");
 
