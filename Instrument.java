@@ -46,10 +46,12 @@ public class Instrument {
                 setAll(InstrumentStaff.BASS, 0, 0, 0, false, "Bsn.");
                 break;
             case "Eb Clarinet":
-                setAll(InstrumentStaff.TREBLE, 2, 3, 0, false, "Eb Cl.");
+                instrumentName = "E♭ Clarinet";
+                setAll(InstrumentStaff.TREBLE, 2, 3, 0, false, "E♭ Cl.");
                 break;
             case "Bb Clarinet":
-                setAll(InstrumentStaff.TREBLE, -1, -2, 0, false, "Bb Cl.");
+                instrumentName = "B♭ Clarinet";
+                setAll(InstrumentStaff.TREBLE, -1, -2, 0, false, "B♭ Cl.");
                 break;
             case "Bass Clarinet":
                 setAll(InstrumentStaff.TREBLE, 0, 0, -1, false, "B. Cl.");
@@ -64,9 +66,11 @@ public class Instrument {
                 setAll(InstrumentStaff.TREBLE, -5, -9, -1, false, "Bar. Sax.");
                 break;
             case "Bb Trumpet":
-                setAll(InstrumentStaff.TREBLE, -1, -2, 0, false, "Bb Tpt.");
+                instrumentName = "B♭ Trumpet";
+                setAll(InstrumentStaff.TREBLE, -1, -2, 0, false, "B♭ Tpt.");
                 break;
             case "F Horn":
+                instrumentName = "Horn in F";
                 setAll(InstrumentStaff.TREBLE, -4, -7, 0, false, "F Hn.");
                 break;
             case "Trombone":

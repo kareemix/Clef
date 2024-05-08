@@ -7,13 +7,13 @@ import java.io.IOException;
 
 public class Music {
 
-    String title;
-    String composer;
-    int tempo;
+    String title = "";
+    String composer = "";
+    int tempo = 120;
     // int measures;
     LinkedList<Instrument> instruments = new LinkedList<Instrument>();
-    int meterNumer;
-    int meterDenom;
+    int meterNumer = 4;
+    int meterDenom = 4;
 
     public void test() {
 
