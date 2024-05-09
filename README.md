@@ -12,6 +12,10 @@ A Java program for creating (very) simple MusicXML templates
 | `instrument` | Add an instrument |
 
 ## Supported Instruments
+
+<details>
+<summary>Woodwinds</summary>
+  
 - Piccolo
 - Flute
 - Oboe
@@ -22,15 +26,35 @@ A Java program for creating (very) simple MusicXML templates
 - Alto Saxophone
 - Tenor Saxophone
 - Baritone Saxophone
+
+</details>
+
+<details>
+<summary>Brass</summary>
+
 - Bb Trumpet
 - F Horn
 - Trombone
 - Euphonium
 - Tuba
+  
+</details>
+
+<details>
+<summary>Strings</summary>
+
 - Double Bass
+
+</details>
+
+<details>
+<summary>Percussion</summary>
+
 - Timpani
 - Glockenspiel
 - Piano
+  
+</details>
 
 ## Example
 ```
@@ -43,3 +67,5 @@ instrument "Alto Saxophone"
 instrument "Piano"
 instrument "Double Bass"
 ```
+Becomes:  
+![image](https://kareemix.github.io/assets/clef-stuff/clef-example.png)
