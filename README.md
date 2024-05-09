@@ -82,3 +82,4 @@ Becomes:
 ## TODO
 
 - Fix second staff invisible rest for Grand Staff Instruments
+- Add more instruments
