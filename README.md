@@ -79,6 +79,6 @@ Becomes:
 
 ![image](https://kareemix.github.io/assets/clef-stuff/clef-example.png)
 
-# TODO
+## TODO
 
 - Fix second staff invisible rest for Grand Staff Instruments
