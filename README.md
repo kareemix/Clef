@@ -57,6 +57,9 @@ A Java program for creating (very) simple MusicXML templates
 </details>
 
 ## Example
+
+This file:  
+
 ```
 title "Op. 1"
 composer "Kareemix"
@@ -67,5 +70,15 @@ instrument "Alto Saxophone"
 instrument "Piano"
 instrument "Double Bass"
 ```
+
+With this command:  
+
+`java Main example.txt`  
+
 Becomes:  
+
 ![image](https://kareemix.github.io/assets/clef-stuff/clef-example.png)
+
+# TODO
+
+- Fix second staff invisible rest for Grand Staff Instruments
