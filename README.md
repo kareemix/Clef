@@ -71,11 +71,13 @@ instrument "Piano"
 instrument "Double Bass"
 ```
 
-With this command:  
+Using the runtime for your OS in the runtimes/ directory, use this command
 
-`java Main example.txt`  
+```
+./clef example.txt
+```
 
-Becomes:  
+To create:  
 
 ![image](https://kareemix.github.io/assets/clef-stuff/clef-example.png)
 
